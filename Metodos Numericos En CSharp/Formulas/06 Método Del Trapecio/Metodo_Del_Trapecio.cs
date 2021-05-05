@@ -47,5 +47,5 @@ namespace Metodos_Numericos_En_CSharp
         }
     }
 }
-    
+
 

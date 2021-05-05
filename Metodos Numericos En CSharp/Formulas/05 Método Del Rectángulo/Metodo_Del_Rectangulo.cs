@@ -2,20 +2,18 @@
 
 namespace Metodos_Numericos_En_CSharp
 {
-    class Regla_De_Simpson
+    class Metodo_Del_Rectangulo
     {
-        public void ReglaDeSimpson()
+        public void MetodoDelRectangulo()
         {
-            Console.WriteLine("-------------------------------------");
+            Console.WriteLine("------------------------------------------");
             int particiones;
 
             double a;
             double b;
+
             double h;
-            double s;
-            double s1;
-            double s2 = 0;
-            double s3 = 0;
+            double s = 0;
 
             //Pedimos el valor de a
             Console.WriteLine("Dame el valor de a");
@@ -29,21 +27,16 @@ namespace Metodos_Numericos_En_CSharp
             Console.WriteLine("Dame el valor de la particiones");
             particiones = Convert.ToInt32(Console.ReadLine());
 
-            //Verficamos que sea par
-            if (particiones % 2 != 0)
-                particiones++;
+            //Calculamos el valor de h, el ancho del rectangulo
+            h = (b - a) / particiones;
 
-            h = (b - a) / (2.0 * particiones);
-
-            s1 = (Funcion(a) + Funcion(b));
-
-            for (int i = 1; i < 2 * particiones; i += 2)
-                s2 += Funcion(a + i * h);
-
-            for (int i = 1; i < 2 * particiones; i += 2)
-                s3 += Funcion(a + i * h);
-
-            s = (h / 3.0) * (s1 + 4.0 * s2 + 2.0 * s3);
+            //Llevamos a cabo la sumatoria de la altura de los rectangulos
+            for (int n = 0; n < particiones; n++)
+            {
+                s += Funcion(a + n * h);
+            }
+            //Ahora obtenemos el area total
+            s *= h;
 
             Console.WriteLine("El resultado es {0}", s);
         }
@@ -54,5 +47,3 @@ namespace Metodos_Numericos_En_CSharp
         }
     }
 }
-    
-

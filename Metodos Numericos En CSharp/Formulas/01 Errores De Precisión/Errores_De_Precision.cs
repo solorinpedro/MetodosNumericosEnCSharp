@@ -7,10 +7,10 @@ namespace Metodos_Numericos_En_CSharp
         public void ErrorDePrecision()
         {
             Console.WriteLine("------------------");
-            
+
             float sumatoria = 0;
 
-            for (int n  = 0; n < 10000; n++)
+            for (int n = 0; n < 10000; n++)
                 sumatoria += 0.1f;
 
             //No obtenemos 1000
@@ -86,6 +86,7 @@ namespace Metodos_Numericos_En_CSharp
 
             Console.WriteLine("7) Error De Precisión Con Valores Tipo Decimal");
             Console.WriteLine("x1={0}, x2={1}, d={2} ", x1Dc, x2Dc, descriminanteDc);
+            Console.WriteLine("---------------------------------------------");
 
             /*Lo mejor es que usamos double o decimal
             Si necesitamos presión infinita lo mejor es usar Maple Mathematica*/

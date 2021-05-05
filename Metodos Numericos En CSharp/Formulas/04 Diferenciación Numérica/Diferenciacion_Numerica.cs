@@ -21,17 +21,17 @@ namespace Metodos_Numericos_En_CSharp
 
             Console.WriteLine("\r\nx\tf(x)");//Encabezado
             //Creamos la tabla
-            for(int n = 0; n < cantidad; n++)//recorrido de 1 en 1
+            for (int n = 0; n < cantidad; n++)//recorrido de 1 en 1
             {
                 y[n] = Funcion(x);
-                Console.WriteLine("{0:N1}\t{1:N4}",x ,y[n]);
+                Console.WriteLine("{0:N1}\t{1:N4}", x, y[n]);
                 x += paso;
             }
 
             //Calculamos la derivada
-            for (int n  = 1; n < cantidad - 1; n++)
+            for (int n = 1; n < cantidad - 1; n++)
             {
-                derivada[n] = (y[n + 1] - y [n - 1]) / (2 * h);
+                derivada[n] = (y[n + 1] - y[n - 1]) / (2 * h);
             }
 
             //Funciona bien pero no podemos calcular la derivada de 0 y 1
@@ -44,7 +44,7 @@ namespace Metodos_Numericos_En_CSharp
             derivada[10] = (3 * y[10] - 4 * y[9] + y[8]) / (2 * h);
 
             Console.WriteLine("\r\nx\tDerivada");
-            for (int n  = 1; n < cantidad; n++)
+            for (int n = 1; n < cantidad; n++)
             {
                 Console.WriteLine("{0:N1}\t{1:N4}", n * h, derivada[n]);
             }
