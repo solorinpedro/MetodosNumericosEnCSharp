@@ -7,13 +7,13 @@ namespace Metodos_Numericos_En_CSharp
         static void Main(string[] args)
         {
 
-            int Option;
+            int Option = 0;
 
             Console.WriteLine("Presione Cualquier Tecla Para Iniciar");
             Console.ReadKey();
             Console.Clear();
 
-            do
+            while (Option != 10)
             {
 
                 //Mostrando el menu principal
@@ -26,12 +26,14 @@ namespace Metodos_Numericos_En_CSharp
                 Console.WriteLine("6. Integración Numérica Método Del Trapecio\n");
                 Console.WriteLine("7. Integración Numérica Regla De Simpson\n");
                 Console.WriteLine("8. Eliminación Gauss-Jordan\n");
+                Console.WriteLine("9. Descomposición LU\n");
+                Console.WriteLine("10. Metodó De Euler\n");
                 Console.WriteLine("Presione un numeró que pertenesca al rango y Luego Presione ENTER");
                 Option = Convert.ToInt32(Console.ReadLine());
                 Console.Clear();
 
-                if (Option <= 8 || Option > 9) 
-                { 
+                if (Option <= 10 || Option > 11)
+                {
                     switch (Option)
                     {
 
@@ -83,16 +85,28 @@ namespace Metodos_Numericos_En_CSharp
                             topic8.EliminacionGaussJordan();
                             break;
 
-
-                        default:
-                            Console.Write("Se ingreso un valor fuera de rango");
+                        case 9:
+                            Console.WriteLine("Descomposición LU");
+                            var topic9 = new Descomposicion_LU();
+                            topic9.DescomposicionLU();
                             break;
 
-                    }break;
 
-                }break;
+                        case 10:
+                            Console.WriteLine("Metodó De Euler");
+                            var topic10 = new Metodo_De_Euler();
+                            topic10.MetodoDeEuler();
+                            break;
 
-            } while (Option > 0);
+                        default:
+                            Console.Write("Usted ingreso un valor fuera de rango\n");
+                            break;
+                    }
+                    break;
+
+                }
+                break;
+            }
         }
     }
 }
