@@ -13,7 +13,7 @@ namespace Metodos_Numericos_En_CSharp
             Console.ReadKey();
             Console.Clear();
 
-            while (Option != 10)
+            while (Option != 11)
             {
 
                 //Mostrando el menu principal
@@ -28,11 +28,12 @@ namespace Metodos_Numericos_En_CSharp
                 Console.WriteLine("8. Eliminación Gauss-Jordan\n");
                 Console.WriteLine("9. Descomposición LU\n");
                 Console.WriteLine("10. Metodó De Euler\n");
+                Console.WriteLine("11. Ecuaciones De Diferenciales De Orden Superior\n");
                 Console.WriteLine("Presione un numeró que pertenesca al rango y Luego Presione ENTER");
                 Option = Convert.ToInt32(Console.ReadLine());
                 Console.Clear();
 
-                if (Option <= 10 || Option > 11)
+                if (Option <= 11 || Option > 12)
                 {
                     switch (Option)
                     {
@@ -91,11 +92,16 @@ namespace Metodos_Numericos_En_CSharp
                             topic9.DescomposicionLU();
                             break;
 
-
                         case 10:
                             Console.WriteLine("Metodó De Euler");
                             var topic10 = new Metodo_De_Euler();
                             topic10.MetodoDeEuler();
+                            break;
+
+                        case 11:
+                            Console.WriteLine("Ecuaciones De Diferenciales De Orden Superior");
+                            var topic11 = new Ecuaciones_De_Orden_Superior();
+                            topic11.EcuacionesDeOrdenSuperior();
                             break;
 
                         default:
@@ -103,7 +109,6 @@ namespace Metodos_Numericos_En_CSharp
                             break;
                     }
                     break;
-
                 }
                 break;
             }
