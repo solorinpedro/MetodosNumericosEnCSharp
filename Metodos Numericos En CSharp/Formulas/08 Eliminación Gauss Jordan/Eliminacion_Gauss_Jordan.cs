@@ -1,8 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Metodos_Numericos_En_CSharp
 {
@@ -10,10 +6,10 @@ namespace Metodos_Numericos_En_CSharp
     {
         public void EliminacionGaussJordan()
         {
-            //Cantidad de ecuaciones
+            //Cantidad de ecuaciones.
             int n = 3;
 
-            //Definimos la matriz donde quedan codificadas las ecuaciones
+            //Definimos la matriz donde quedan codificadas las ecuaciones.
             double[,] matriz = new double[3, 4] 
             {
                 { 1, 2,  1,  0},
@@ -30,7 +26,7 @@ namespace Metodos_Numericos_En_CSharp
 
             for(k = 0; k < n; k++)
             {
-                //obtenemos el pivote
+                //obtenemos el pivote.
                 pivote = matriz[k, k];
 
                 for (j = k; j < n + 1; j++)
