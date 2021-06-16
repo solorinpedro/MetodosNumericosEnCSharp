@@ -14,15 +14,15 @@ namespace Metodos_Numericos_En_CSharp
             int conteo = 0;
             double epsilion = 1.0e-10;
 
-            //Pedimos el valor de x1
+            //Pedimos el valor de x1.
             Console.WriteLine("Dame el valor de x1");
             x1 = Convert.ToDouble(Console.ReadLine());
 
-            //Pedimos el valor de x2
+            //Pedimos el valor de x2.
             Console.WriteLine("Dame el valor de x2");
             x2 = Convert.ToDouble(Console.ReadLine());
 
-            //llevamos a cabo la bisección
+            //llevamos a cabo la bisección.
             while (!(Función(x3) == 0.0 && Math.Abs(x1 - x2) < epsilion))
             {
                 x3 = (x1 + x2) / 2.0;
@@ -40,7 +40,6 @@ namespace Metodos_Numericos_En_CSharp
             Console.WriteLine("La iteraciones fueron {0}", conteo);
             Console.WriteLine("x = {0}", x1);
         }
-
         private static double Función(double x)
         {
             return (-4 * x * x * x) + (6 * x * x) + 2 * x;
