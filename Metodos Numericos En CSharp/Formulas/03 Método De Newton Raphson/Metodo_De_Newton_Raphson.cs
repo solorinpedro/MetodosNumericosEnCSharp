@@ -11,13 +11,13 @@ namespace Metodos_Numericos_En_CSharp
             double x2;
             int n;
 
-            //Pedimos el valor de Inicial
+            //Pedimos el valor de Inicial.
             Console.WriteLine("Dame el valor de inicial");
             x1 = Convert.ToDouble(Console.ReadLine());
 
             double epsilion = 1.0e-10;
 
-            //verificamos que la derivada no sea igual a cero
+            //verificamos que la derivada no sea igual a cero.
 
             if (Derivada(x1) == 0.0)
                 Console.WriteLine("La derivada de x1 es cero");
@@ -27,11 +27,11 @@ namespace Metodos_Numericos_En_CSharp
                 //calculamos x2
                 x2 = NewtonRaphson(x1);
 
-                //verificamos si ya estamos los suficientemente cerca
+                //verificamos si ya estamos los suficientemente cerca.
                 if (Math.Abs(x1 - x2) < epsilion)
                     break;
 
-                //Actualizamos x1 para a cercarnos a la raiz
+                //Actualizamos x1 para a cercarnos a la raiz.
                 x1 = x2;
             }
             Console.WriteLine("La iteraciones fueron {0}", n);
