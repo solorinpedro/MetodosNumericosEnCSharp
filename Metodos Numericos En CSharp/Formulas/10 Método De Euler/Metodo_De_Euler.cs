@@ -13,10 +13,10 @@ namespace Metodos_Numericos_En_CSharp
             Console.WriteLine("t\t Euler\t Exacto");
             for(int i = 0; i<=10; i++)
             {
-                //Mostramos valores
+                //Mostramos los valores.
                 Console.WriteLine("{0:0.###}\t{1:0.###}\t{2:0}.###", t, y , Math.Exp(t));
 
-                //Calculamos el valor
+                //Calculamos el valor de la función.
                 y += h * Funcion(t, y);
                 t += h;
             }
