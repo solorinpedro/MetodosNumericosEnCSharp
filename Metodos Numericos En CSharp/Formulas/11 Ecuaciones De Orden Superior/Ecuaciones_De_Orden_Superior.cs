@@ -11,7 +11,6 @@ namespace Metodos_Numericos_En_CSharp
             double y2 = 1.0;
             double x = 0;
 
-
             Console.WriteLine("x\ty2\tcos(x)");
             for (int i = 0; i <= 10; i++)
             {
