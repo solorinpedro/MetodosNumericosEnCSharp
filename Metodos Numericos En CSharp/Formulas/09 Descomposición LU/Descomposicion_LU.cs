@@ -1,8 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Metodos_Numericos_En_CSharp
 {
@@ -42,7 +38,7 @@ namespace Metodos_Numericos_En_CSharp
                 }
             }
 
-            //Ahora la sustitución para atras.
+            //Ahora mostramos la sustitución para atras.
             for (k = n - 1; k >= 0; k--)
             {
                 for (l = k + 1; l < n; l--)
