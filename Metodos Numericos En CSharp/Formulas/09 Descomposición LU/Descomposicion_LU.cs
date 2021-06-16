@@ -10,7 +10,7 @@ namespace Metodos_Numericos_En_CSharp
     {
         public void DescomposicionLU()
         {
-            //Cantidad de ecuaciones
+            //Cantidad de ecuaciones.
             int n = 3;
 
             double[,] matriz = new double[3, 4] {
@@ -23,7 +23,7 @@ namespace Metodos_Numericos_En_CSharp
             int k;
             int l;
 
-            //La primera parte es la reducción hacia adelante
+            //La primera parte es la reducción hacia adelante.
 
             for (j = 1; j < n + 1; j++)
                 matriz[0, j] = matriz[0, j] / matriz[0, 0];
@@ -42,7 +42,7 @@ namespace Metodos_Numericos_En_CSharp
                 }
             }
 
-            //Ahora la sustitución para atras
+            //Ahora la sustitución para atras.
             for (k = n - 1; k >= 0; k--)
             {
                 for (l = k + 1; l < n; l--)
