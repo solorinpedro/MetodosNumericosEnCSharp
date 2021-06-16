@@ -17,11 +17,11 @@ namespace Metodos_Numericos_En_CSharp
             double s2 = 0;
             double s3 = 0;
 
-            //Pedimos el valor de a
+            //Pedimos el valor de A.
             Console.WriteLine("Dame el valor de a");
             a = Convert.ToDouble(Console.ReadLine());
 
-            //Pedimos el valor de b
+            //Pedimos el valor de B.
             Console.WriteLine("Dame el valor de b");
             b = Convert.ToDouble(Console.ReadLine());
 
@@ -29,7 +29,7 @@ namespace Metodos_Numericos_En_CSharp
             Console.WriteLine("Dame el valor de la particiones");
             particiones = Convert.ToInt32(Console.ReadLine());
 
-            //Verficamos que sea par
+            //Verficamos que sea par.
             if (particiones % 2 != 0)
                 particiones++;
 
