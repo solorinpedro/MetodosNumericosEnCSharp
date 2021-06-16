@@ -9,7 +9,7 @@ namespace Metodos_Numericos_En_CSharp
             //Cantidad de ecuaciones.
             int n = 3;
 
-            //Definimos la matriz donde quedan codificadas las ecuaciones.
+            //Aqui definimos la matriz donde quedan codificadas las ecuaciones.
             double[,] matriz = new double[3, 4] 
             {
                 { 1, 2,  1,  0},
